@@ -1,0 +1,9 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: template-service
+spec:
+  minAvailable: "50%"
+  selector:
+   matchLabels:
+    app: template-service
