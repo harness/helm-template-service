@@ -25,10 +25,10 @@ data:
   ENABLE_AUDIT: "true"
   ACCESS_CONTROL_ENABLED: "true"
   ENFORCEMENT_CHECK_ENABLED: "true"
-  NG_MANAGER_BASE_URL: '{{ .Values.global.loadbalancerURL }}/ng/api/'
-  ACCESS_CONTROL_BASE_URL: '{{ .Values.global.loadbalancerURL }}/authz/api/'
-  AUDIT_SERVICE_BASE_URL: '{{ .Values.global.loadbalancerURL }}/audit/api/'
+  NG_MANAGER_BASE_URL: 'http://ng-manager.{{ .Release.Namespace }}.svc.cluster.local:7090/api/'
+  ACCESS_CONTROL_BASE_URL: http://accesscontrol-service.{{ .Release.Namespace }}.svc.cluster.local:9006/api/
+  AUDIT_SERVICE_BASE_URL: http://accesscontrol-service.{{ .Release.Namespace }}.svc.cluster.local:9006/api/
   SERVER_PORT: "15002"
   PMS_GRPC_AUTHORITY: default-authority.harness.io
   PMS_GRPC_TARGET: pipeline-service:12011
-  MANAGER_CLIENT_BASEURL: {{ .Values.global.loadbalancerURL }}/api/
+  MANAGER_CLIENT_BASEURL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/api/
