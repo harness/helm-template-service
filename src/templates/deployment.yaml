@@ -42,13 +42,13 @@ spec:
         securityContext:
           {{- toYaml .Values.securityContext | nindent 12 }}
         ports:
-          - name: template-grpc
+          - name: grpc-template
             containerPort: {{ .Values.service.grpcport }}
             protocol: "TCP"
-          - name: template-http
+          - name: http-template
             containerPort: {{ .Values.service.port }}
             protocol: "TCP"
-          - name: gitsync-grpc
+          - name: grpc-gitsync
             containerPort: {{ .Values.service.gitsyncgrpcport }}
             protocol: "TCP"
         resources:
