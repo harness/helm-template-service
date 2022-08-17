@@ -3,16 +3,16 @@ entries:
   template-service:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-08-16T19:55:48.167901+05:30"
+    created: "2022-08-18T01:40:05.946715+05:30"
     dependencies:
     - name: harness-common
       repository: https://harness.github.io/helm-common/charts
       version: 0.1.1
     description: A Helm chart for Kubernetes
-    digest: 6232f17ce754778cc74f91610fefa12486c2b40336ad0d79f5af02490ff1940f
+    digest: fee673f7608e07f2790ac6a978168f60a2a545d957146d9a9952067e2f5fc5e5
     name: template-service
     type: application
     urls:
     - template-service-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-16T19:55:48.166615+05:30"
+generated: "2022-08-18T01:40:05.945447+05:30"
