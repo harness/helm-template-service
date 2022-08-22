@@ -1,0 +1,21 @@
+apiVersion: v1
+entries:
+  template-service:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-08-22T23:45:59.467629396Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.x.x
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 16ee5e68151fc811a20ae7cd3b456c9778936589451986e011f1fc1970c9ebdc
+    name: template-service
+    type: application
+    urls:
+    - https://github.com/harness/helm-template-service/releases/download/template-service-0.2.0/template-service-0.2.0.tgz
+    version: 0.2.0
+generated: "2022-08-22T23:45:59.467646897Z"
