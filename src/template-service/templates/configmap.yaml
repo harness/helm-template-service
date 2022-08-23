@@ -12,9 +12,9 @@ data:
   LOGGING_LEVEL: {{ .Values.appLogLevel }}
   MEMORY: {{ .Values.java.memory | quote }}
   MANAGER_TARGET: harness-manager:9879
-  MANAGER_AUTHORITY: default-authority.harness.io
+  MANAGER_AUTHORITY: harness-manager:9879
   NG_MANAGER_GITSYNC_TARGET: ng-manager:13002
-  NG_MANAGER_GITSYNC_AUTHORITY: default-authority.harness.io
+  NG_MANAGER_GITSYNC_AUTHORITY: ng-manager:13002
   SCM_SERVICE_URI: "scm:8091"
   EVENTS_FRAMEWORK_REDIS_URL: 'redis://localhost:6379'
   EVENTS_FRAMEWORK_USE_SENTINEL: "true"
@@ -29,6 +29,6 @@ data:
   ACCESS_CONTROL_BASE_URL: '{{ .Values.global.loadbalancerURL }}/authz/api/'
   AUDIT_SERVICE_BASE_URL: '{{ .Values.global.loadbalancerURL }}/audit/api/'
   SERVER_PORT: "15002"
-  PMS_GRPC_AUTHORITY: default-authority.harness.io
+  PMS_GRPC_AUTHORITY: pipeline-service:12011
   PMS_GRPC_TARGET: pipeline-service:12011
   MANAGER_CLIENT_BASEURL: {{ .Values.global.loadbalancerURL }}/api/
