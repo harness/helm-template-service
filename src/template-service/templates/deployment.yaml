@@ -53,7 +53,7 @@ spec:
         imagePullPolicy: IfNotPresent
         args:
           - "pod"
-          - "-lapp=app.kubernetes.io/name:pipeline-service"
+          - "-lapp=pipeline-service"
       containers:
       - name: template-service
         image:  {{ include "common.images.image" (dict "imageRoot" .Values.image "global" .Values.global) }}
