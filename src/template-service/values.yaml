@@ -28,6 +28,14 @@ timescaleSecret:
     name: harness-secrets
     key: timescaledbPostgresPassword
 
+waitForInitContainer:
+  image:
+    registry: docker.io
+    repository: harness/helm-init-container
+    pullPolicy: IfNotPresent
+    tag: "latest"
+    digest: ""
+
 appLogLevel: INFO
 
 java:
