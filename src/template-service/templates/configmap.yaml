@@ -26,8 +26,8 @@ data:
   ACCESS_CONTROL_ENABLED: "true"
   ENFORCEMENT_CHECK_ENABLED: "true"
   NG_MANAGER_BASE_URL: '{{ .Values.global.loadbalancerURL }}/ng/api/'
-  ACCESS_CONTROL_BASE_URL: '{{ .Values.global.loadbalancerURL }}/authz/api/'
-  AUDIT_SERVICE_BASE_URL: '{{ .Values.global.loadbalancerURL }}/audit/api/'
+  ACCESS_CONTROL_BASE_URL: 'http://access-control.{{ .Release.Namespace }}.svc.cluster.local:9006/api/'
+  AUDIT_SERVICE_BASE_URL: 'http://platform-service.{{ .Release.Namespace }}.svc.cluster.local:9005/api/'
   SERVER_PORT: "15002"
   PMS_GRPC_AUTHORITY: pipeline-service:12011
   PMS_GRPC_TARGET: pipeline-service:12011
