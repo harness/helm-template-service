@@ -1,1 +1,1 @@
-# Helm chart for template-service
+src/template-service/README.md
