@@ -20,8 +20,9 @@ spec:
       maxUnavailable: {{.Values.maxUnavailable}}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
+      checksum/config: {{ include (print $.Template.BasePath "/config.yaml") . | sha256sum }}
       annotations:
+      {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
