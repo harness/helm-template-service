@@ -15,7 +15,7 @@ data:
   MANAGER_AUTHORITY: harness-manager:9879
   NG_MANAGER_GITSYNC_TARGET: ng-manager:13002
   NG_MANAGER_GITSYNC_AUTHORITY: ng-manager:13002
-  SCM_SERVICE_URI: "scm:8091"
+  SCM_SERVICE_URI: "scm-service:8091"
   EVENTS_FRAMEWORK_REDIS_URL: 'redis://localhost:6379'
   EVENTS_FRAMEWORK_USE_SENTINEL: "true"
   EVENTS_FRAMEWORK_SENTINEL_MASTER_NAME: 'harness-redis'
@@ -25,10 +25,10 @@ data:
   ENABLE_AUDIT: "true"
   ACCESS_CONTROL_ENABLED: "true"
   ENFORCEMENT_CHECK_ENABLED: "true"
-  NG_MANAGER_BASE_URL: '{{ .Values.global.loadbalancerURL }}/ng/api/'
+  NG_MANAGER_BASE_URL: 'http://ng-manager:7090/'
   ACCESS_CONTROL_BASE_URL: 'http://access-control.{{ .Release.Namespace }}.svc.cluster.local:9006/api/'
   AUDIT_SERVICE_BASE_URL: 'http://platform-service.{{ .Release.Namespace }}.svc.cluster.local:9005/api/'
   SERVER_PORT: "15002"
   PMS_GRPC_AUTHORITY: pipeline-service:12011
   PMS_GRPC_TARGET: pipeline-service:12011
-  MANAGER_CLIENT_BASEURL: {{ .Values.global.loadbalancerURL }}/api/
+  MANAGER_CLIENT_BASEURL: 'http://harness-manager:9090/api/'
